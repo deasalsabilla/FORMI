@@ -60,8 +60,21 @@
     .card-footer {
       border-top: 1px solid #dfe3e8;
     }
+
+    .post {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      display: flex;
+      width: 115px;
+      height: 45px;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s;
+      z-index: 99;
+    }
   </style>
-  <title>Card Postingan Forum</title>
+  <title>Forum | Materi Kuliah</title>
 </head>
 
 <body>
@@ -119,11 +132,13 @@
         </div>
       </div>
     </div>
-  @include('partials.pagination')
+    @include('partials.pagination')
 
-  @include('partials.footer')
+    @include('partials.footer')
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    @include('user.buatPosting')
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
