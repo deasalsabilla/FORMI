@@ -52,10 +52,10 @@
                         </div>
                         <div class="form-group">
                             <label for="semester">Semester</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" id="semester" name="semester" aria-label="Default select example">
                                 <option value="">-- Pilih Semester --</option>
                                 @foreach($opt as $item)
-                                    <option value="{{ $item->kode }}">{{ $item->nama }}</option>
+                                <option value="{{ $item->kode }}">{{ $item->nama }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -68,7 +68,7 @@
             <!-- /.card -->
         </div>
 
-        
+
 
         <!-- DataTable with Card Shadow -->
         <div class="card shadow">

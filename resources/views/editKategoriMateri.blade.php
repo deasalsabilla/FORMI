@@ -21,7 +21,8 @@
                 <!-- /.card-header -->
                 <!-- form start -->
                 <form action="{{ route('kategori-materi.update', $data->kode) }}" method="POST" enctype="multipart/form-data">
-
+                    @csrf
+                    @method('PUT')</form>
                     <div class="card-body">
                         <div class="form-group">
                             <label for="nama">Nama Kategori</label>

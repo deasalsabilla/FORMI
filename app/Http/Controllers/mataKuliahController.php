@@ -12,15 +12,15 @@ class mataKuliahController extends Controller
     public function index()
     {
         $data = mataKuliah::all();
-        $opt = KatMateri::all(); // Tambahkan ini untuk mengambil data $opt
-        return view('kelMataKuliah', compact('data', 'opt')); // Mengirimkan data $opt ke view
+        $opt = KatMateri::all();
+        return view('kelMataKuliah', compact('data', 'opt'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
             'nama' => 'required|string|max:255',
-            'semester' => 'required|string|max:255',
+            'semester' => 'required', // Remove 'string' validation as it's not necessary
         ]);
 
         $nm_kecil = strtolower(str_replace(' ', '', $request->nama));
@@ -40,14 +40,16 @@ class mataKuliahController extends Controller
             'nm_kecil' => $nm_kecil,
             'kode' => $newKode, // Set the generated code
         ]);
-        return Redirect::route('mata-kuliah.index')->with('success', 'Data berhasil ditambahkan!');
+        return redirect()->route('mata-kuliah.index')->with('success', 'Data berhasil ditambahkan!');
     }
 
     public function edit($kode)
     {
         $data = mataKuliah::where('kode', $kode)->firstOrFail();
-        return view('editMataKuliah', compact('data'));
+        $opt = KatMateri::all(); // Mendapatkan data semester
+        return view('editMataKuliah', compact('data', 'opt')); // Mengirimkan data semester ke view
     }
+
 
 
     public function update(Request $request, $kode)
