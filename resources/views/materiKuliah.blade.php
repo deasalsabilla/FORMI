@@ -47,7 +47,7 @@
     }
 
     .sidebar li a:hover {
-      color: black;
+      color: white;
       border-radius: 20px;
       background-color: grey;
     }

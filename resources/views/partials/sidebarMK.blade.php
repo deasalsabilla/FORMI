@@ -17,6 +17,7 @@
           <div id="semester{{ $semester->kode }}Collapse" class="accordion-collapse collapse show" aria-labelledby="semester{{ $semester->kode }}Heading" data-bs-parent="#semesterAccordion">
             <div class="accordion-body">
               <ul>
+                <li><a href="#">All</a></li>
                 @foreach($data as $mataKuliah)
                 @if($semester->kode == $mataKuliah->semester)
                 <li><a href="#">{{ $mataKuliah->nama }}</a></li>
