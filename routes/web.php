@@ -17,7 +17,7 @@ use App\Http\Controllers\mataKuliahController;
 use App\Http\Controllers\sidebarMKController;
 
 Route::get('/', function () {
-    return view('home');
+    return view('user.home');
 });
 Route::get('/diskusi-materi-kuliah', function () {
     return view('materiKuliah');
@@ -29,16 +29,16 @@ Route::get('/profil-mahasiswa', function () {
     return view('profilmhs');
 });
 Route::get('/proyek-kolaboratif', function () {
-    return view('proyekkolaboratif');
+    return view('user.proyekkolaboratif');
 });
 Route::get('/admin', function () {
-    return view('homeAdmin');
+    return view('admin.homeAdmin');
 });
 Route::get('/admin/kelola-kategori-materi', function () {
-    return view('kelKategoriMateri');
+    return view('admin.kelKategoriMateri');
 });
 Route::get('/admin/kelola-mata-kuliah', function () {
-    return view('kelMataKuliah');
+    return view('admin.kelMataKuliah');
 });
 Route::get('/tes', function () {
     return view('tes');

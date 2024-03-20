@@ -16,7 +16,7 @@
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Diskusi</a>
                     <div class="dropdown-menu m-0">
                         <a href="/diskusi-materi-kuliah" class="dropdown-item">Materi Kuliah</a>
-                        <a href="" class="dropdown-item">Proyek Kolaboratif</a>
+                        <a href="/proyek-kolaboratif" class="dropdown-item">Proyek Kolaboratif</a>
                         <a href="blog.html" class="dropdown-item">Event & Seminar</a>
                         <a href="blog.html" class="dropdown-item">Lain-Lain</a>
                     </div>

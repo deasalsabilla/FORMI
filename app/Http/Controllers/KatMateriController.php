@@ -11,7 +11,7 @@ class KatMateriController extends Controller
     public function index()
     {
         $data = KatMateri::all();
-        return view('kelKategoriMateri', compact('data'));
+        return view('admin.kelKategoriMateri', compact('data'));
     }
 
 
@@ -43,7 +43,7 @@ class KatMateriController extends Controller
     public function edit($kode)
     {
         $data = KatMateri::where('kode', $kode)->firstOrFail();
-        return view('editKategoriMateri', compact('data'));
+        return view('admin.editKategoriMateri', compact('data'));
     }
 
 

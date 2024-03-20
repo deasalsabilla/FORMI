@@ -13,7 +13,7 @@ class mataKuliahController extends Controller
     {
         $data = mataKuliah::all();
         $opt = KatMateri::all();
-        return view('kelMataKuliah', compact('data', 'opt'));
+        return view('admin.kelMataKuliah', compact('data', 'opt'));
     }
 
     public function store(Request $request)
@@ -47,7 +47,7 @@ class mataKuliahController extends Controller
     {
         $data = mataKuliah::where('kode', $kode)->firstOrFail();
         $opt = KatMateri::all(); // Mendapatkan data semester
-        return view('editMataKuliah', compact('data', 'opt')); // Mengirimkan data semester ke view
+        return view('admin.editMataKuliah', compact('data', 'opt')); // Mengirimkan data semester ke view
     }
 
 
