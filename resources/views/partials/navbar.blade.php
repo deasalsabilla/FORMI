@@ -17,7 +17,7 @@
                     <div class="dropdown-menu m-0">
                         <a href="/diskusi-materi-kuliah" class="dropdown-item">Materi Kuliah</a>
                         <a href="/proyek-kolaboratif" class="dropdown-item">Proyek Kolaboratif</a>
-                        <a href="blog.html" class="dropdown-item">Event & Seminar</a>
+                        <a href="/event-seminar" class="dropdown-item">Event & Seminar</a>
                         <a href="blog.html" class="dropdown-item">Lain-Lain</a>
                     </div>
                 </div>

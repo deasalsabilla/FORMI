@@ -31,6 +31,9 @@ Route::get('/profil-mahasiswa', function () {
 Route::get('/proyek-kolaboratif', function () {
     return view('user.proyekkolaboratif');
 });
+Route::get('/event-seminar', function () {
+    return view('user.eventseminar');
+});
 Route::get('/admin', function () {
     return view('admin.homeAdmin');
 });
