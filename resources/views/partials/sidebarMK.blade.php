@@ -8,7 +8,7 @@
 
       <div class="accordion" id="semesterAccordion">
         @foreach($opt as $semester)
-        <div class="accordion-item">
+        <div class="accordion-item mb-3">
           <h2 class="accordion-header" id="semester{{ $semester->kode }}Heading">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#semester{{ $semester->kode }}Collapse" aria-expanded="true" aria-controls="semester{{ $semester->kode }}Collapse">
               {{ $semester->nama }}

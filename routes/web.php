@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KatMateriController;
 use App\Http\Controllers\mataKuliahController;
 use App\Http\Controllers\sidebarMKController;
+use App\Http\Controllers\buatPostingController;
 
 Route::get('/', function () {
     return view('user.home');
@@ -48,6 +49,9 @@ Route::get('/tes', function () {
 });
 
 Route::get('/diskusi-materi-kuliah', [sidebarMKController::class, 'index'])->name('sidebar.index');
+
+Route::get('/diskusi-materi-kuliah', [buatPostingController::class, 'index'])->name('buatPosting.index');
+Route::get('/api/mata-kuliah/{id_kategori}', [buatPostingController::class, 'getMataKuliahByKategori']);
 
 Route::get('/admin/kelola-kategori-materi', [KatMateriController::class, 'index'])->name('kategori-materi.index');
 Route::post('/admin/kelola-kategori-materi/store', [KatMateriController::class, 'store'])->name('kategori-materi.store');
